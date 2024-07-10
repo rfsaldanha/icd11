@@ -1,6 +1,6 @@
 ## code to prepare `mapping` dataset goes here
 
-icd10_11 <- readr::read_tsv(
+mapping_icd10_11 <- readr::read_tsv(
   file = "data-raw/icd11_raw_data/mapping/10To11MapToMultipleCategories.txt",
   col_types = c("cnccccn__c___")
 ) |>
@@ -17,4 +17,4 @@ icd10_11 <- readr::read_tsv(
 
 # strsplit(x = as.character(icd10_11[16,8]), split = "&")
 
-usethis::use_data(icd10_11, overwrite = TRUE, compress = "xz")
+usethis::use_data(mapping_icd10_11, overwrite = TRUE, compress = "xz")
