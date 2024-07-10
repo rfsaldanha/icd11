@@ -17,4 +17,4 @@ icd10_11 <- readr::read_tsv(
 
 # strsplit(x = as.character(icd10_11[16,8]), split = "&")
 
-usethis::use_data(mapping, overwrite = TRUE)
+usethis::use_data(icd10_11, overwrite = TRUE, compress = "xz")
